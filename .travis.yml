@@ -3,5 +3,5 @@ rvm:
   - 2.2.1
 before_install: 
 - gem install bundler -v 1.11.2
-- sudo apt update -y && sudo apt install -y aubio
+- sudo apt update -y && sudo apt install -y libaubio-dev
 script: bundle && bundle exec rake test
