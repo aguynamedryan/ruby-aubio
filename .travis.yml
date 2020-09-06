@@ -3,5 +3,8 @@ rvm:
   - 2.2.1
 before_install: 
 - gem install bundler -v 1.11.2
-- sudo apt update -y && sudo apt install -y libaubio-dev
+- curl -Ssl "https://github.com/aubio/aubio/archive/0.4.9.tar.gz" | tar zxvf -
+- cd aubio-0.4.9
+- make
+- sudo make install
 script: bundle && bundle exec rake test
